@@ -25,7 +25,7 @@ async function main() {
 ```
 
 ## NPM Package
-- NPM package over at **[brreg-toolkit](https://www.npmjs.com/package/brreg-toolkit)**
+NPM package over at **[brreg-toolkit](https://www.npmjs.com/package/brreg-toolkit)**
 
 
 ## Maintainers
