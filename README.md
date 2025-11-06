@@ -23,3 +23,10 @@ async function main() {
   console.log(data.navn)
 }
 ```
+
+## NPM Package
+- NPM package over at **[brreg-toolkit](https://www.npmjs.com/package/brreg-toolkit)**
+
+
+## Maintainers
+**[Talimere](https://github.com/Talimere)**
