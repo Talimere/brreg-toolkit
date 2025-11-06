@@ -5,12 +5,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/talimere/brreg-toolkit.git"
+    "url": "git+https://github.com/Talimere/brreg-toolkit.git"
   },
   "bugs": {
-    "url": "https://github.com/talimere/brreg-toolkit/issues"
+    "url": "https://github.com/Talimere/brreg-toolkit/issues"
   },
-  "homepage": "https://github.com/talimere/brreg-toolkit#readme",
+  "homepage": "https://github.com/Talimere/brreg-toolkit#readme",
   "publishConfig": {
     "provenance": true
   },
