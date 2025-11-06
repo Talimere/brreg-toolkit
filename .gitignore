@@ -1,0 +1,69 @@
+# ===========================================
+# Node / TypeScript / Library project ignores
+# ===========================================
+
+# Dependencies
+node_modules/
+.pnpm-store/
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+
+# Build output
+dist/
+build/
+coverage/
+.nyc_output/
+
+# Temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+
+# Test-related
+.vitest/
+coverage/
+*.lcov
+
+# TypeScript
+*.tsbuildinfo
+
+# Local environment and runtime files
+.env
+.env.*.local
+*.local
+
+# macOS / Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===========================================
+# Project-specific
+# ===========================================
+
+# Ignore any test recordings, mocks, or artifacts
+test-results/
+__mocks__/
+
+# Example builds or playgrounds (if any)
+playground/
+examples/dist/
+
+# npm pack artifacts
+*.tgz
+
+# VSCode project state
+.history/
