@@ -1,7 +1,8 @@
 {
   "name": "brreg-toolkit",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Toolkit for interacting with Brønnøysundregistrene APIs",
+  "keywords": [],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -11,13 +12,8 @@
     "url": "https://github.com/Talimere/brreg-toolkit/issues"
   },
   "homepage": "https://github.com/Talimere/brreg-toolkit#readme",
-  "publishConfig": {
-    "provenance": true
-  },
+
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -25,19 +21,30 @@
       "require": "./dist/index.cjs"
     }
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "engines": {
     "node": ">=18"
   },
-  "files": [
-    "dist"
-  ],
+
   "scripts": {
     "build": "tsup",
     "test": "vitest run",
-    "prepublishOnly": "npm run test && npm run build"
+    "prepublishOnly": "npm run test && npm run build",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier -w ."
   },
-  "keywords": [],
+
+  "publishConfig": {
+    "provenance": true
+  },
+
   "dependencies": {
     "zod": "^4.1.12"
   },
