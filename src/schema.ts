@@ -43,6 +43,38 @@ export const BrregEnhetSchema = z
       .partial()
       .optional(),
   })
-  .passthrough()
+  .catchall(z.unknown())
 
 export type BrregEnhet = z.infer<typeof BrregEnhetSchema>
+
+export const PageSchema = z.object({
+  number: z.number(),
+  size: z.number(),
+  totalPages: z.number(),
+  totalElements: z.number(),
+})
+
+const LinkObj = z.object({ href: z.string() }).partial()
+export const LinksSchema = z
+  .object({
+    self: LinkObj.optional(),
+    first: LinkObj.optional(),
+    prev: LinkObj.optional(),
+    next: LinkObj.optional(),
+    last: LinkObj.optional(),
+  })
+  .partial()
+
+export const EnheterSearchResponseSchema = z
+  .object({
+    _links: LinksSchema.optional(),
+    _embedded: z
+      .object({
+        enheter: z.array(BrregEnhetSchema),
+      })
+      .optional(),
+    page: PageSchema.optional(),
+  })
+  .catchall(z.unknown())
+
+export type EnheterSearchResponse = z.infer<typeof EnheterSearchResponseSchema>

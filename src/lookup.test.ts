@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { lookupOrgNumber, parseOrgNumber } from './core'
 import type { LookupOptions } from './types'
 
-const noWait = async () => {}
+const noWait = async () => { }
 const instantRetry = { retries: 3, baseDelayMs: 0, backoffFactor: 1, sleepFn: noWait }
 
 function json(data: any, status = 200, headers: Record<string, string> = {}) {
@@ -218,7 +218,7 @@ describe('lookupOrgNumber – abort handling & fetch presence', () => {
       if (init?.signal?.aborted) {
         throw new Error('aborted')
       }
-      
+
       ac.abort()
       if (init?.signal?.aborted) {
         throw new Error('aborted')
@@ -237,11 +237,11 @@ describe('lookupOrgNumber – abort handling & fetch presence', () => {
 
   it('throws a clear error if no fetch implementation is available', async () => {
     const originalFetch = (globalThis as any).fetch
-    ;(globalThis as any).fetch = undefined
+      ; (globalThis as any).fetch = undefined
 
     await expect(lookupOrgNumber('509100675')).rejects.toThrow(/No fetch implementation found/i)
 
-    ;(globalThis as any).fetch = originalFetch
+      ; (globalThis as any).fetch = originalFetch
   })
 })
 
